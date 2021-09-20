@@ -32,10 +32,10 @@ namespace Flight_planner.Web.Storage
                 _flights.Add(flight);
                 _flightId += 1;
 
-                if (!EqualsCheck.EqualAirportCheck(flight.From))
+                if (!EqualsCheck.AreAirportsEqual(flight.From))
                     AirportsStorage.AddAirport(flight.From);
 
-                if (!EqualsCheck.EqualAirportCheck(flight.To))
+                if (!EqualsCheck.AreAirportsEqual(flight.To))
                     AirportsStorage.AddAirport(flight.To);
 
                 return flight;

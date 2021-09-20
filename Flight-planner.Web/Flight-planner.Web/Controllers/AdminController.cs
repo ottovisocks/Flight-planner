@@ -30,7 +30,7 @@ namespace Flight_planner.Web.Controllers
         {
             lock (_flightsLock)
             {
-                if (EqualsCheck.EqualFlightCheck(flight))
+                if (EqualsCheck.AreFlightsEqual(flight))
                     return Conflict();
 
                 if (!InputDataValidator.IsValid(flight))

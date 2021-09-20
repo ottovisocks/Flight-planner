@@ -6,16 +6,16 @@ namespace Flight_planner.Web.Validators
 {
     public class EqualsCheck
     {
-        public static bool EqualFlightCheck(Flight flight)
+        public static bool AreFlightsEqual(Flight flight)
         {
             return FlightStorage.GetFlightsList().Any(item =>
                 item.Carrier.Equals(flight.Carrier) &&
                 item.DepartureTime.Equals(flight.DepartureTime) &&
                 item.ArrivalTime.Equals(flight.ArrivalTime)) &&
-                EqualAirportCheck(flight.From) && EqualAirportCheck(flight.To);
+                AreAirportsEqual(flight.From) && AreAirportsEqual(flight.To);
         }
 
-        public static bool EqualAirportCheck(Airport airport)
+        public static bool AreAirportsEqual(Airport airport)
         {
             return AirportsStorage.GetAirportsList().Any(item =>
                 item.Country.Equals(airport.Country) &&
