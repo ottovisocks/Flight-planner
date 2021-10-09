@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Flight_Planner.Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Flight-Planner.Core\Flight-Planner.Core.csproj" />
+    <ProjectReference Include="..\Flight-Planner.Data\Flight-Planner.Data.csproj" />
+  </ItemGroup>
+
+</Project>
